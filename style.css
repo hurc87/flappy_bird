@@ -1,0 +1,43 @@
+#game {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    /* this stops the block going outside the game container */
+    overflow: hidden;
+}
+
+#block {
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    /* needs to be have a relative position for the left styling to work */
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+
+@keyframes block {
+    0% { left: 400px; }
+    100% { left: -50px; }
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    /* this will make the whole appear on top of the block */
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+
+#character {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
